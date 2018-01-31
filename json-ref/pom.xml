@@ -13,6 +13,9 @@
   information: "Portions Copyrighted [year] [name of copyright owner]".
 
   Copyright 2012-2016 ForgeRock AS.
+  
+  Portions Copyrighted 2018 Athesys
+  
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -24,18 +27,17 @@
     <artifactId>json-ref</artifactId>
     <packaging>pom</packaging>
     <name>JSON Reference libraries</name>
-    <url>http://commons.forgerock.org/json-ref</url>
     <issueManagement>
-        <system>JIRA</system>
-        <url>https://bugster.forgerock.org/jira/browse/CREST</url>
+        <system>github</system>
+        <url>https://github.com/Athesys/forgerock-commons/issues</url>
     </issueManagement>
-    <distributionManagement>
+    <!--<distributionManagement>
         <site>
             <id>forgerock.org</id>
             <name>ForgeRock Community</name>
             <url>scp://forgerock.org/var/www/vhosts/commons.forgerock.org/httpdocs/json-ref</url>
         </site>
-    </distributionManagement>
+    </distributionManagement>-->
     <modules>
         <module>json-ref-core</module>
         <module>json-ref-jackson</module>

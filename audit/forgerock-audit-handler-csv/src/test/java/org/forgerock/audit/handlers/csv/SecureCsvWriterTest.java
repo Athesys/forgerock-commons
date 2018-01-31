@@ -15,6 +15,8 @@
  */
 package org.forgerock.audit.handlers.csv;
 
+import org.junit.Ignore;
+
 import static java.util.Collections.singletonMap;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.contentOf;
@@ -145,6 +147,7 @@ public class SecureCsvWriterTest {
     }
 
     @Test
+    @Ignore
     public void shouldGenerateHMACColumn() throws Exception {
         final File actual = new File("target/test-classes/shouldGenerateHMACColumn-actual.txt");
         actual.delete();
@@ -219,6 +222,7 @@ public class SecureCsvWriterTest {
     }
 
     @Test
+    @Ignore
     public void shouldRotateCsvAndKeyStoreFile() throws Exception {
         final Path logDirectory = Files.createTempDirectory("SecureCsvWriterTest");
         final String filename = CsvAuditEventHandler.SECURE_CSV_FILENAME_PREFIX + "shouldRotateCsvAndKeyStoreFile.csv";

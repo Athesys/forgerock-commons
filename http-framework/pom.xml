@@ -12,9 +12,13 @@
   Header, with the fields enclosed by brackets [] replaced by your own identifying
   information: "Portions Copyright [year] [name of copyright owner]".
 
-  Copyright 2010–2011 ApexIdentity Inc.
+  Copyright 2010-2011 ApexIdentity Inc.
   Portions Copyright 2011-2016 ForgeRock AS.
+  
+  Portions Copyright 2018 Athesys
+  
 -->
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
@@ -31,10 +35,9 @@
        script friendly, and includes adapters for various common HTTP libraries
        such as Servlet, Apache HTTP Clients, and Grizzly.
   </description>
-  <url>http://commons.forgerock.org/forgerock-http-framework</url>
   <issueManagement>
-    <system>JIRA</system>
-    <url>https://bugster.forgerock.org/jira/browse/CHF</url>
+    <system>github</system>
+    <url>https://github.com/Athesys/forgerock-commons/issues</url>
   </issueManagement>
   <modules>
     <module>http-core</module>

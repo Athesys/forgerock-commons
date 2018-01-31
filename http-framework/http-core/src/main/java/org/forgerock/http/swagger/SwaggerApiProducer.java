@@ -12,13 +12,15 @@
  * information: "Portions copyright [year] [name of copyright owner]".
  *
  * Copyright 2016 ForgeRock AS.
+ * 
+ * Portions copyright 2018 Athesys
  */
 
 package org.forgerock.http.swagger;
 
 import static java.util.Arrays.*;
 import static java.util.Collections.*;
-import static org.forgerock.guava.common.base.Strings.*;
+import static com.google.common.base.Strings.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -27,7 +29,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.forgerock.guava.common.base.Function;
+import com.google.common.base.Function;
 import org.forgerock.http.ApiProducer;
 import org.forgerock.http.header.AcceptApiVersionHeader;
 import org.forgerock.http.routing.Version;

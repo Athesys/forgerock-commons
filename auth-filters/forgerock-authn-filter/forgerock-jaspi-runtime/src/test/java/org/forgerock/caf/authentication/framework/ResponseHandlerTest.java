@@ -12,6 +12,9 @@
  * information: "Portions copyright [year] [name of copyright owner]".
  *
  * Copyright 2014-2015 ForgeRock AS.
+ * 
+ * Portions copyright 2018 Athesys
+ * 
  */
 
 package org.forgerock.caf.authentication.framework;
@@ -30,7 +33,7 @@ import java.util.Map;
 
 import org.forgerock.caf.authentication.api.AuthenticationException;
 import org.forgerock.caf.authentication.api.MessageContext;
-import org.forgerock.guava.common.net.MediaType;
+import com.google.common.net.MediaType;
 import org.forgerock.http.header.ContentTypeHeader;
 import org.forgerock.http.protocol.Request;
 import org.forgerock.http.protocol.Response;

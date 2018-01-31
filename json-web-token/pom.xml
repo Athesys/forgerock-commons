@@ -13,6 +13,9 @@
   information: "Portions Copyrighted [year] [name of copyright owner]".
 
   Copyright 2011-2016 ForgeRock AS. All rights reserved.
+  
+  Portions Copyrighted 2018 Athesys
+  
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -28,17 +31,17 @@
     <packaging>bundle</packaging>
 
     <issueManagement>
-        <system>JIRA</system>
-        <url>https://bugster.forgerock.org/jira/browse/CREST</url>
+        <system>github</system>
+        <url>https://github.com/Athesys/forgerock-commons/issues</url>
     </issueManagement>
 
-    <distributionManagement>
+    <!-- <distributionManagement>
         <site>
             <id>forgerock.org</id>
             <name>ForgeRock Community</name>
             <url>scp://forgerock.org/var/www/vhosts/commons.forgerock.org/httpdocs/json-web-token</url>
         </site>
-    </distributionManagement>
+    </distributionManagement>-->
     <properties>
         <clirrComparisonVersion>3.0.0</clirrComparisonVersion>
     </properties>

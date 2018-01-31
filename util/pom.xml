@@ -12,6 +12,8 @@
   ~ information: "Portions copyright [year] [name of copyright owner]".
   ~
   ~ Copyright 2015 ForgeRock AS.
+  
+  ~ Portions Copyright 2018 Athesys
   -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -24,10 +26,9 @@
     <name>ForgeRock Utility Classes Parent</name>
     <description>Miscellaneous utility classes used within ForgeRock projects.</description>
     <packaging>pom</packaging>
-    <url>http://commons.forgerock.org/forgerock-util</url>
     <issueManagement>
-        <system>JIRA</system>
-        <url>https://bugster.forgerock.org/jira/browse/COMMONS</url>
+        <system>github</system>
+        <url>https://github.com/Athesys/forgerock-commons/issues</url>
     </issueManagement>
     <distributionManagement>
         <site>

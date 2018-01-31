@@ -13,6 +13,9 @@
   information: "Portions Copyright [year] [name of copyright owner]".
 
   Copyright 2014-2016 ForgeRock AS.
+  
+  Portions Copyright 2018 Athesys.
+  
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -43,10 +46,6 @@
       <groupId>org.forgerock.commons</groupId>
       <artifactId>json-resource-http</artifactId>
       <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.forgerock.commons.guava</groupId>
-      <artifactId>forgerock-guava-base</artifactId>
     </dependency>
     <dependency>
       <groupId>org.forgerock.commons</groupId>
@@ -122,7 +121,7 @@
         <artifactId>maven-javadoc-plugin</artifactId>
         <configuration>
           <links>
-            <link>http://commons.forgerock.org/forgerock-util/apidocs</link>
+            <!-- TODO --><link>http://commons.forgerock.org/forgerock-util/apidocs</link>
           </links>
         </configuration>
       </plugin>

@@ -72,7 +72,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import org.forgerock.api.CrestApiProducer;
 import org.forgerock.api.models.ApiDescription;
 import org.forgerock.api.transform.OpenApiTransformer;
-import org.forgerock.guava.common.base.Optional;
+import com.google.common.base.Optional;
 import org.forgerock.http.ApiProducer;
 import org.forgerock.http.Handler;
 import org.forgerock.http.header.AcceptLanguageHeader;
