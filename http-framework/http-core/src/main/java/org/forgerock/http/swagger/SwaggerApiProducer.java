@@ -12,15 +12,14 @@
  * information: "Portions copyright [year] [name of copyright owner]".
  *
  * Copyright 2016 ForgeRock AS.
- * 
- * Portions copyright 2018 Athesys
  */
-
 package org.forgerock.http.swagger;
 
-import static java.util.Arrays.*;
-import static java.util.Collections.*;
-import static com.google.common.base.Strings.*;
+import static java.util.Arrays.asList;
+import static java.util.Collections.singletonList;
+import static com.google.common.base.Strings.isNullOrEmpty;
+import static org.forgerock.http.util.Paths.addLeadingSlash;
+import static org.forgerock.http.util.Paths.removeTrailingSlash;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -57,6 +56,15 @@ public class SwaggerApiProducer implements ApiProducer<Swagger> {
     private final String host;
 
     /**
+     * Create a new API Description Producer with {@literal null} as basePath, host and no scheme.
+     *
+     * @param info The Swagger {@code Info} instance to add to all OpenAPI descriptors.
+     */
+    public SwaggerApiProducer(Info info) {
+        this(info, null, null, Collections.<Scheme> emptyList());
+    }
+
+    /**
      * Create a new API Description Producer.
      *
      * @param info The Swagger {@code Info} instance to add to all OpenAPI descriptors.
@@ -80,7 +88,7 @@ public class SwaggerApiProducer implements ApiProducer<Swagger> {
         this.info = info;
         this.basePath = basePath;
         this.host = host;
-        this.schemes = schemes;
+        this.schemes = new ArrayList<>(schemes);
     }
 
     @Override
@@ -93,7 +101,7 @@ public class SwaggerApiProducer implements ApiProducer<Swagger> {
         private final String parentPath;
 
         PathTransformer(String parentPath) {
-            this.parentPath = parentPath.endsWith("/") ? parentPath.substring(0, parentPath.length() - 1) : parentPath;
+            this.parentPath = addLeadingSlash(removeTrailingSlash(parentPath));
         }
 
         @Override
@@ -101,10 +109,7 @@ public class SwaggerApiProducer implements ApiProducer<Swagger> {
             Map<String, Path> result = new HashMap<>(pathMap.size());
             for (Map.Entry<String, Path> entry : pathMap.entrySet()) {
                 String key = entry.getKey();
-                if (!key.startsWith("/")) {
-                    key = "/" + key;
-                }
-                result.put(parentPath + key, entry.getValue());
+                result.put(parentPath + addLeadingSlash(key), entry.getValue());
             }
             return result;
         }

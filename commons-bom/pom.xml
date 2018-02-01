@@ -389,6 +389,18 @@
                 <artifactId>forgerock-audit-handler-csv</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            
+            <dependency>
+                <groupId>org.forgerock.commons</groupId>
+                <artifactId>forgerock-audit-handler-splunk</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            
+            <dependency>
+                <groupId>org.forgerock.commons</groupId>
+                <artifactId>forgerock-audit-handler-json</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.forgerock.commons</groupId>

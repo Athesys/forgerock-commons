@@ -12,9 +12,6 @@
  * information: "Portions copyright [year] [name of copyright owner]".
  *
  * Copyright 2014-2015 ForgeRock AS.
- * 
- * Portions copyright 2018 Athesys
- * 
  */
 
 package org.forgerock.caf.authentication.framework;
