@@ -26,8 +26,20 @@ import org.junit.rules.TemporaryFolder;
 
 import java.io.IOException;
 
+import org.junit.Assume;
+import org.junit.BeforeClass;
+
 @SuppressWarnings("javadoc")
 public class SyntaxHighlighterCopierTest {
+	
+	@BeforeClass
+	public static void checkOs() throws Exception {
+		Assume.assumeTrue(!isWindows());
+	}
+	
+	private static boolean isWindows() {
+		return System.getProperty("os.name").toLowerCase().contains("windows");
+	}
 
     @Rule
     public TemporaryFolder folder = new TemporaryFolder();
@@ -45,6 +57,13 @@ public class SyntaxHighlighterCopierTest {
         scanner.scan();
 
         String[] shFiles = scanner.getIncludedFiles();
+
+        /*for (int i = 0; i < shFiles.length; i++) {
+            if (shFiles[i].indexOf("\\") > -1) {
+                shFiles[i] = shFiles[i].replace("\\", "/");
+            }
+        }*/
+
         assertThat(shFiles).contains("sh/css/shCore.css", "sh/js/shAll.js");
     }
 

@@ -29,8 +29,20 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
+import org.junit.Assume;
+import org.junit.BeforeClass;
+
 @SuppressWarnings("javadoc")
 public class KeepTogetherTransformerTest {
+	
+	@BeforeClass
+	public static void checkOs() throws Exception {
+		Assume.assumeTrue(!isWindows());
+	}
+	
+	private static boolean isWindows() {
+		return System.getProperty("os.name").toLowerCase().contains("windows");
+	}
 
     @Rule
     public TemporaryFolder folder = new TemporaryFolder();
