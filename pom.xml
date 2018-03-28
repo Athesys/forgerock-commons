@@ -77,5 +77,10 @@
 		<module>self-service</module>
 		<module>util</module>
 		<module>security</module>
+		<module>json-fluent</module>
+		<module>doc-maven-plugin</module>
+    		<module>doc-default-branding</module>
+    		<module>doc-common-content</module>
+    		<module>xcite-maven-plugin</module>
 	</modules>
 </project>
